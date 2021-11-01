@@ -1,0 +1,82 @@
+			@font-face {
+				font-family: "dima";
+				src: url('FIRESTARTER.TTF') format('truetype');
+			}
+			html,body{
+			min-height:100%;
+			margin:0;
+			padding:0;
+			overflow-x:hidden;
+			}
+			body{
+				background-image:url(zadina6.jpg);
+				background-repeat:no-repeat;
+				background-size:cover;
+				background-position: center;
+			}
+			ul li a:hover{
+				background-color:yellow;
+				color:black;
+			}
+			ul li a{
+				color:yellow;
+				font-size:20px;
+				font-family:verdana;
+				border:2px solid;
+				margin-right:5px;
+			}
+			ul li a:link{
+				padding:0;
+			}
+			.borderi{
+				border: 3px solid white;
+				
+			}
+			h1[alt="Simple"] {color: white;}
+			.starrating > input {display: none;} 
+			.starrating > label:before { 
+			  content: "\f005";
+			  margin: 2px;
+			  font-size: 3em;
+			  font-family: FontAwesome;
+			  display: inline-block; 
+			}
+
+			.starrating > label
+			{
+			  color: #383A24; 
+			}
+
+			.starrating > input:checked ~ label
+			{ color: #ffca08 ; }
+
+			.starrating > input:hover ~ label
+			{ color: #ffca08 ;  } 
+			.map-responsive{
+				overflow:hidden;
+				padding-bottom:56.25%;
+				position:relative;
+				height:0;
+			}
+			.map-responsive iframe{
+				left:0;
+				top:0;
+				height:100%;
+				width:100%;
+				position:absolute;
+			}
+			.footer {
+			  position: fixed;
+			  left: 0;
+			  bottom: 0;
+			  width: 100%;
+			  background-color: red;
+			  color: white;
+			  text-align: center;
+			}
+			.card-img-bottom {
+			  color: #fff;
+			  height: 20rem;
+			  background:center no-repeat;
+			  background-size: cover;
+			}

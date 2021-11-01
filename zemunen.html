@@ -1,0 +1,371 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel = "text" href = "FIRESTARTER.TTF" >
+		<link rel = "stylesheet" href="potpunCSS.css">
+	</head>
+	<body class ="bg-dark">
+		<center>
+			<header style="color:yellow;font-size:40px;font-family:dima">
+				<div>
+					<img src="logo4.png" alt="Logo" style="width:75px;">
+					Hottie
+				</div>
+			</header>
+				<nav class="navbar navbar-expand-md" style="align:center">
+					<button class="navbar-toggler "style="background-color:yellow;margin:0px auto;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon "style="background-image:url(strelica.png)"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav" style="margin:0px auto;">
+							<li class="nav-item">
+								<a class="nav-link" href="weben.html" >Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Restaurants
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+								<a class="dropdown-item bg-warning" href="starigraden.html" style="margin-bottom:10px">Stari Grad</a>
+								<a class="dropdown-item bg-warning" href="novibgen.html" style="margin-bottom:10px">Novi Beograd</a>
+								<a class="dropdown-item bg-warning" href="zemunen.html" style="margin-bottom:10px">Zemun</a>
+								<a class="dropdown-item bg-warning" href="vracaren.html">Vracar</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="dostavaen.html">Delivery</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="mojanarudzbinaen.html">My deliveries</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="onamaen.html">About us</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Language
+								</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+							<a class="dropdown-item bg-warning" href="zemun.html" style="margin-bottom:10px">Srpski &nbsp <img src="zastavaSRB.jpg" style="width:20px;height:15px"></a>
+							<a class="dropdown-item bg-warning" href="#">English &nbsp <img src="zastavaENG.png" style="width:20px;height:15px"></a>
+							</div>
+						</li>
+						</ul>
+					</div>
+				</nav>
+				<div style="color:yellow;font-size:35pt;margin-top:30px">Municipality Zemun</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<ul class="nav nav-pills flex-column" aria-orientation="vertical">
+							<li class="nav-item" style="width:100px">
+								<h3 style="color:yellow;text-align:left">Sort:</h3>
+							</li>
+							<li class="nav-item" >
+								<button class="btn btn-warning " onclick="sortPoImenima()" style="width:100px;font-size:14pt;margin-bottom:10px">Name </button>
+							</li>
+							<li class="nav-item" >
+								<button class="btn btn-warning" onclick="sortLokacije()" style="width:100px;font-size:14pt;margin-bottom:10px">Location</button>
+							</li>
+							<li class="nav-item" >
+								<button class="btn btn-warning" onclick="sortPoOcenama()" style="width:100px;font-size:14pt;margin-bottom:10px">Grade</button>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-10">
+						<div class="container" id="kontenjer">
+						</div>
+					</div>
+				</div>
+			</div>
+		</center>
+		<div class="row">
+			<div class="col-sm-2">
+				<nav aria-label="breadcrumb" >
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="weben.html">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Zemun</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<footer style="background-color:#17202A;color:white;" align="center">
+			Copyright 2019, Nikola Ilic and Dimitrije Gucevic, Department of Software Engineering Electrical Engineering faculty of the University of Belgrade
+		</footer>
+		<script>
+			window.addEventListener("load",function(){
+			var Restorani=JSON.parse(sessionStorage.getItem("Restoranien"));
+				console.log(Restorani);
+				var kontenjer=document.getElementById("kontenjer");
+				for(var i=0;i<Restorani.length;i++){
+					console.log(Restorani[i].opstina);
+					if(Restorani[i].opstina=="Zemun"){
+						var kartica=document.createElement("div");
+						kartica.classList.add("card");
+						kartica.classList.add("bg-dark");
+						kartica.style="color:white;margin-bottom:10px";
+						var row=document.createElement("div");
+						row.classList.add("row");
+						var kolona1=document.createElement("div");
+						kolona1.classList.add("col-md-6");
+						var kolona2=document.createElement("div");
+						kolona2.classList.add("col-md-6");
+						var blok=document.createElement("div");
+						blok.classList.add("card-block");
+						
+						var slika=document.createElement("div");
+						slika.classList.add("card-img-bottom");
+						slika.style="Background-image:url("+Restorani[i].slika+")";
+						var naslov=document.createElement("h1");
+						naslov.classList.add("card-title");
+						naslov.innerHTML=Restorani[i].ime;
+						var tip=document.createElement("p");
+						tip.classList.add("card-text");
+						tip.innerHTML="Food type: "+Restorani[i].tipHrane;
+						var opstina=document.createElement("p");
+						opstina.classList.add("card-text");
+						opstina.innerHTML="Municipality: "+Restorani[i].opstina;
+						var lokacija=document.createElement("p");
+						lokacija.classList.add("card-text");
+						lokacija.innerHTML="Location: "+Restorani[i].lokacija;
+						var ocena=document.createElement("p");
+						ocena.classList.add("card-text");
+						ocena.innerHTML="Grade: "+Restorani[i].ocena;
+						var dugme=document.createElement("a");
+						dugme.classList.add("btn");
+						dugme.classList.add("btn-primary");
+						dugme.innerHTML="Show";
+						dugme.href=Restorani[i].stranica;
+						
+						blok.appendChild(naslov);
+						blok.appendChild(tip);
+						blok.appendChild(opstina);
+						blok.appendChild(lokacija);
+						blok.appendChild(ocena);
+						blok.appendChild(dugme);
+						
+						kolona1.appendChild(slika);
+						kolona2.appendChild(blok);
+						row.appendChild(kolona1);
+						row.appendChild(kolona2);
+						kartica.appendChild(row);
+						kontenjer.appendChild(kartica);
+					}
+					
+				}
+			});
+		function dynamicSort(property) {
+				var sortOrder = 1;
+
+				if(property[0] === "-") {
+					sortOrder = -1;
+					property = property.substr(1);
+				}
+
+				return function (a,b) {
+					if(sortOrder == -1){
+						return b[property].localeCompare(a[property]);
+					}else{
+						return a[property].localeCompare(b[property]);
+					}        
+				}
+			}
+			function sortLokacije(){
+				var Restorani=JSON.parse(sessionStorage.getItem("Restorani"));
+				Restorani.sort(dynamicSort("lokacija"));
+				var kontenjer=document.getElementById("kontenjer");
+				kontenjer.innerHTML="";
+				console.log(Restorani);
+				for(var i=0;i<Restorani.length;i++){
+					console.log(Restorani[i].opstina);
+					if(Restorani[i].opstina=="Zemun"){
+						var kartica=document.createElement("div");
+						kartica.classList.add("card");
+						kartica.classList.add("bg-dark");
+						kartica.style="color:white;margin-bottom:10px";
+						var row=document.createElement("div");
+						row.classList.add("row");
+						var kolona1=document.createElement("div");
+						kolona1.classList.add("col-md-6");
+						var kolona2=document.createElement("div");
+						kolona2.classList.add("col-md-6");
+						var blok=document.createElement("div");
+						blok.classList.add("card-block");
+						
+						var slika=document.createElement("div");
+						slika.classList.add("card-img-bottom");
+						slika.style="Background-image:url("+Restorani[i].slika+")";
+						var naslov=document.createElement("h1");
+						naslov.classList.add("card-title");
+						naslov.innerHTML=Restorani[i].ime;
+						var tip=document.createElement("p");
+						tip.classList.add("card-text");
+						tip.innerHTML="Tip hrane: "+Restorani[i].tipHrane;
+						var opstina=document.createElement("p");
+						opstina.classList.add("card-text");
+						opstina.innerHTML="Opstina: "+Restorani[i].opstina;
+						var lokacija=document.createElement("p");
+						lokacija.classList.add("card-text");
+						lokacija.innerHTML="Lokacija: "+Restorani[i].lokacija;
+						var ocena=document.createElement("p");
+						ocena.classList.add("card-text");
+						ocena.innerHTML="Ocena: "+Restorani[i].ocena;
+						var dugme=document.createElement("a");
+						dugme.classList.add("btn");
+						dugme.classList.add("btn-primary");
+						dugme.innerHTML="Prikazi";
+						dugme.href=Restorani[i].stranica;
+					
+						blok.appendChild(naslov);
+						blok.appendChild(tip);
+						blok.appendChild(opstina);
+						blok.appendChild(lokacija);
+						blok.appendChild(ocena);
+						blok.appendChild(dugme);
+						
+						kolona1.appendChild(slika);
+						kolona2.appendChild(blok);
+						row.appendChild(kolona1);
+						row.appendChild(kolona2);
+						kartica.appendChild(row);
+						kontenjer.appendChild(kartica);
+					}
+				}
+			}
+			function sortPoImenima(){
+				var Restorani=JSON.parse(sessionStorage.getItem("Restorani"));
+				Restorani.sort(dynamicSort("ime"));
+				var kontenjer=document.getElementById("kontenjer");
+				kontenjer.innerHTML="";
+				console.log(Restorani);
+				for(var i=0;i<Restorani.length;i++){
+					console.log(Restorani[i].opstina);
+					if(Restorani[i].opstina=="Zemun"){
+						var kartica=document.createElement("div");
+						kartica.classList.add("card");
+						kartica.classList.add("bg-dark");
+						kartica.style="color:white;margin-bottom:10px";
+						var row=document.createElement("div");
+						row.classList.add("row");
+						var kolona1=document.createElement("div");
+						kolona1.classList.add("col-md-6");
+						var kolona2=document.createElement("div");
+						kolona2.classList.add("col-md-6");
+						var blok=document.createElement("div");
+						blok.classList.add("card-block");
+						
+						var slika=document.createElement("div");
+						slika.classList.add("card-img-bottom");
+						slika.style="Background-image:url("+Restorani[i].slika+")";
+						var naslov=document.createElement("h1");
+						naslov.classList.add("card-title");
+						naslov.innerHTML=Restorani[i].ime;
+						var tip=document.createElement("p");
+						tip.classList.add("card-text");
+						tip.innerHTML="Food type: "+Restorani[i].tipHrane;
+						var opstina=document.createElement("p");
+						opstina.classList.add("card-text");
+						opstina.innerHTML="Municipality: "+Restorani[i].opstina;
+						var lokacija=document.createElement("p");
+						lokacija.classList.add("card-text");
+						lokacija.innerHTML="Location: "+Restorani[i].lokacija;
+						var ocena=document.createElement("p");
+						ocena.classList.add("card-text");
+						ocena.innerHTML="Grade: "+Restorani[i].ocena;
+						var dugme=document.createElement("a");
+						dugme.classList.add("btn");
+						dugme.classList.add("btn-primary");
+						dugme.innerHTML="Show";
+						dugme.href=Restorani[i].stranica;
+						
+						blok.appendChild(naslov);
+						blok.appendChild(tip);
+						blok.appendChild(opstina);
+						blok.appendChild(lokacija);
+						blok.appendChild(ocena);
+						blok.appendChild(dugme);
+						
+						kolona1.appendChild(slika);
+						kolona2.appendChild(blok);
+						row.appendChild(kolona1);
+						row.appendChild(kolona2);
+						kartica.appendChild(row);
+						kontenjer.appendChild(kartica);
+					}
+					
+				}
+			}
+			function compare2(a,b){
+			return b.ocena-a.ocena;
+			}
+			function sortPoOcenama(){
+				var Restorani=JSON.parse(sessionStorage.getItem("Restoranien"));
+				Restorani.sort(compare2);
+				var kontenjer=document.getElementById("kontenjer");
+				kontenjer.innerHTML="";
+				console.log(Restorani);
+				for(var i=0;i<Restorani.length;i++){
+					console.log(Restorani[i].opstina);
+					if(Restorani[i].opstina=="Zemun"){
+						var kartica=document.createElement("div");
+						kartica.classList.add("card");
+						kartica.classList.add("bg-dark");
+						kartica.style="color:white;margin-bottom:10px";
+						var row=document.createElement("div");
+						row.classList.add("row");
+						var kolona1=document.createElement("div");
+						kolona1.classList.add("col-md-6");
+						var kolona2=document.createElement("div");
+						kolona2.classList.add("col-md-6");
+						var blok=document.createElement("div");
+						blok.classList.add("card-block");
+						
+						var slika=document.createElement("div");
+						slika.classList.add("card-img-bottom");
+						slika.style="Background-image:url("+Restorani[i].slika+")";
+						var naslov=document.createElement("h1");
+						naslov.classList.add("card-title");
+						naslov.innerHTML=Restorani[i].ime;
+						var tip=document.createElement("p");
+						tip.classList.add("card-text");
+						tip.innerHTML="Food type: "+Restorani[i].tipHrane;
+						var opstina=document.createElement("p");
+						opstina.classList.add("card-text");
+						opstina.innerHTML="Municipality: "+Restorani[i].opstina;
+						var lokacija=document.createElement("p");
+						lokacija.classList.add("card-text");
+						lokacija.innerHTML="Location: "+Restorani[i].lokacija;
+						var ocena=document.createElement("p");
+						ocena.classList.add("card-text");
+						ocena.innerHTML="Grade: "+Restorani[i].ocena;
+						var dugme=document.createElement("a");
+						dugme.classList.add("btn");
+						dugme.classList.add("btn-primary");
+						dugme.innerHTML="Show";
+						dugme.href=Restorani[i].stranica;
+						
+						blok.appendChild(naslov);
+						blok.appendChild(tip);
+						blok.appendChild(opstina);
+						blok.appendChild(lokacija);
+						blok.appendChild(ocena);
+						blok.appendChild(dugme);
+						
+						kolona1.appendChild(slika);
+						kolona2.appendChild(blok);
+						row.appendChild(kolona1);
+						row.appendChild(kolona2);
+						kartica.appendChild(row);
+						kontenjer.appendChild(kartica);
+					}
+					
+				}
+			}
+		</script>
+	</body>
+</html>

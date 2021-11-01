@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel = "stylesheet" href="potpunCSS.css">
+</head>
+<body>
+	<center>
+		<header style="color:yellow;font-size:40px;font-family:dima">
+		<div >
+			<img src="logo4.png" alt="Logo" style="width:75px;">
+			 Hottie
+		</div>
+		</header>
+			<nav class="navbar navbar-expand-md" style="align:center">
+				<button class="navbar-toggler "style="background-color:yellow;margin:0px auto;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon "style="background-image:url(strelica.png)"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav" style="margin:0px auto;">
+						<li class="nav-item">
+							<a class="nav-link" href="web.html" >Pocetna</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Restorani
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+							<a class="dropdown-item bg-warning" href="starigrad.html" style="margin-bottom:10px">Stari Grad</a>
+							<a class="dropdown-item bg-warning" href="novibg.html" style="margin-bottom:10px">Novi Beograd</a>
+							<a class="dropdown-item bg-warning" href="zemun.html" style="margin-bottom:10px">Zemun</a>
+							<a class="dropdown-item bg-warning" href="vracar.html">Vracar</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="dostava.html">Dostava</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="mojanarudzbina.html">Moje narudzbine</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="onama.html">O nama</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Jezik
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+							<a class="dropdown-item bg-warning" href="#" style="margin-bottom:10px">Srpski &nbsp <img src="zastavaSRB.jpg" style="width:20px;height:15px"></a>
+							<a class="dropdown-item bg-warning" href="weben.html">English &nbsp <img src="zastavaENG.png" style="width:20px;height:15px"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		<div style="color:yellow;font-size:35pt">Naručite dostavu hrane iz najboljih restorana</div>
+		<div class="container">
+			<div class="row ">
+				<div class="col-sm-4 d-flex align-items-stretch">
+					<div class="card bg-dark ">
+						<img class="card-img-top" src="" alt="Card image" style="width:100%;height:200px;" id="prvaslika">
+						<div class="card-body" style="color:white;font-size:11.2pt">
+							<h1 class="card-title" id="naslov1"></h1>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item bg-dark" id="tip1"></li>
+								<li class="list-group-item bg-dark" id="opstina1"></li>
+								<li class="list-group-item bg-dark" id="lokacija1"></li>
+								<li class="list-group-item bg-dark" id="ocena1"></li>
+							</ul>
+							<br>
+							<a href="#" class="btn btn-primary"id="dugme1">Prikazi</a>
+						</div>
+					</div>	
+				</div>
+				<div class="col-sm-4 d-flex align-items-stretch">
+					<div class="card bg-dark">
+						<img class="card-img-top" src="" alt="Card image" style="width:100%;height:200px;" id="drugaslika">
+						<div class="card-body" style="color:white;font-size:11.2pt">
+							<h1 class="card-title" id="naslov2"></h1>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item bg-dark" id="tip2"></li>
+								<li class="list-group-item bg-dark" id="opstina2"></li>
+								<li class="list-group-item bg-dark" id="lokacija2"></li>
+								<li class="list-group-item bg-dark" id="ocena2"></li>
+							</ul>
+							<br>
+								<a href="#" class="btn btn-primary" id="dugme2">Prikazi</a>
+						</div>
+					</div>	
+				</div>
+				<div class="col-sm-4 d-flex align-items-stretch">
+					<div class="card bg-dark">
+						<img class="card-img-top" src="" alt="Card image" style="width:100%;height:200px;" id="trecaslika">
+						<div class="card-body" style="color:white;font-size:11.2pt">
+								<h1 class="card-title" id="naslov3"></h1>
+								<ul class="list-group list-group-flush">	
+								<li class="list-group-item bg-dark" id="tip3"></li>
+								<li class="list-group-item bg-dark" id="opstina3"></li>
+								<li class="list-group-item bg-dark" id="lokacija3"></li>
+								<li class="list-group-item bg-dark" id="ocena3"></li>
+							</ul>
+							<br>
+							<a href="#" class="btn btn-primary"id="dugme3">Prikazi</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	<div class="row">
+		<div class="col-sm-1">
+			<nav aria-label="breadcrumb" >
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active" aria-current="page">Pocetna</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+		<footer style="background-color:#17202A;color:white;" align="center">
+			Copyright 2019,Nikola Ilić i Dimitrije Gučević, Одсек за софтверско инжењерство Електротехничког
+               факултета Универзитета у Београду
+		</footer>
+	<script>
+	console.log(localStorage.getItem("broj"));
+	if(sessionStorage.getItem("broj")!="3"){
+		var Restorani=[
+			{ime : "Marukoshi",tipHrane : "Japanska",opstina: "Stari Grad",lokacija : "Kapetan Mišina 37",ocena : 0, slika : "marukoshi.jpg",zbir : 0,brojocena : 0,stranica:"marukoshi.html",jelovnik:"marujelovnik.html",narudzbine:"",cena:0},
+			{ime : "Vapiano",tipHrane : "Italijanska kuhinja",opstina: "Stari Grad",lokacija : "Kneza Mihaila 54",ocena : 0, slika : "vapiano.jpg",zbir : 0,brojocena : 0, stranica:"vapiano.html", jelovnik:"vapianojelovnik.html",narudzbine:"",cena:0},
+			{ime : "Shavarma Hanan",tipHrane : "Izraelska kuhinja",opstina: "Stari Grad",lokacija : "Strahinjića Bana 57",ocena : 0, slika : "hanan.jpg",zbir : 0,brojocena : 0, stranica:"hanan.html",jelovnik:"hananjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Milky",tipHrane : "Palacinke",opstina: "Stari Grad",lokacija : "Kneginje Ljubice 20",ocena : 0, slika : "milky.jpg",zbir : 0,brojocena : 0, stranica:"milky.html",jelovnik:"milkyjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Falafel Cose",tipHrane : "Izraelska kuhinja",opstina: "Novi Beograd",lokacija : "Gandijeva 3",ocena : 0, slika : "falafel.jpg",zbir : 0,brojocena : 0, stranica:"falafel.html",jelovnik:"falafeljelovnik.html",narudzbine:"",cena:0},
+			{ime : "Protein",tipHrane : "Proteinska kuhinja",opstina: "Novi Beograd",lokacija : "Bulevar Mihajla Pupina 24",ocena : 0, slika : "protein.jpg",zbir : 0,brojocena : 0, stranica:"protein.html",jelovnik:"proteinjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Pizza Bar",tipHrane : "Italijanska kuhinja",opstina: "Novi Beograd",lokacija : "Bulevar Mihajla Pupina 165v",ocena : 0, slika : "pizzabar.jpg",zbir : 0,brojocena : 0, stranica:"pizzabar1.html",jelovnik:"pizzabar1jelovnik.html",narudzbine:"",cena:0},
+			{ime : "Intergalactic",tipHrane : "Burgeri",opstina: "Novi Beograd",lokacija : "Bulevar Nikole Tesle 3",ocena : 0, slika : "inter.jpg",zbir : 0,brojocena : 0, stranica:"intergalactic.html",jelovnik:"intergalacticjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Keops",tipHrane : "Palacinke",opstina: "Zemun",lokacija : "Kej Oslobođenja bb",ocena : 0, slika : "keops.jpg",zbir : 0,brojocena : 0, stranica:"keops.html",jelovnik:"keopsjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Bella Napoli",tipHrane : "Italijanska kuhinja",opstina: "Zemun",lokacija : "Zmaj Jovina 35",ocena : 0, slika : "bella.jpg",zbir : 0,brojocena : 0, stranica:"bella.html",jelovnik:"bellajelovnik.html",narudzbine:"",cena:0},
+			{ime : "Gong Fast Food",tipHrane : "Kineska kuhinja",opstina: "Zemun",lokacija : "37k prve pruge",ocena : 0, slika : "gong.jpg",zbir : 0,brojocena : 0, stranica:"gong.html",jelovnik:"gongjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Burger house",tipHrane : "Burgeri",opstina: "Zemun",lokacija : "Nikole Spasića 3",ocena : 0, slika : "burgerhouse.jpg",zbir : 0,brojocena : 0, stranica:"burgerhouse.html",jelovnik:"burgerhousejelovnik.html",narudzbine:"",cena:0},
+			{ime : "Glumac",tipHrane : "Palacinke",opstina: "Vracar",lokacija : "Francuska 3",ocena : 0, slika : "glumac.jpg",zbir : 0,brojocena : 0, stranica:"glumac.html",jelovnik:"glumacjelovnik.html",narudzbine:"",cena:0},
+			{ime : "Kod Mare",tipHrane : "Burgeri",opstina: "Vracar",lokacija : "Novopazarska 14",ocena : 0, slika : "mara.jpg",zbir : 0,brojocena : 0, stranica:"mara.html",jelovnik:"marajelovnik.html",narudzbine:"",cena:0},
+			{ime : "Pizza Bar",tipHrane : "Italijanska kuhinja",opstina: "Vracar",lokacija : "Mutapova 5-7",ocena : 0, slika : "pizzabar2.jpg",zbir : 0,brojocena : 0, stranica:"pizzabar2.html",jelovnik:"pizzabar2jelovnik.html",narudzbine:"",cena:0},
+			{ime : "Giros Posejdon",tipHrane : "Grcka kuhinja",opstina: "Vracar",lokacija : "Katanićeva",ocena : 0, slika : "posejdon.jpg",zbir : 0,brojocena : 0, stranica:"posejdon.html",jelovnik:"posejdonjelovnik.html",narudzbine:"",cena:0}
+			]
+			var Restoranien=[
+			{ime : "Marukoshi",tipHrane : "Japanese",opstina: "Stari Grad",lokacija : "Kapetan Mišina 37",ocena : 0, slika : "marukoshi.jpg",zbir : 0,brojocena : 0,stranica:"marukoshien.html",jelovnik:"marujelovniken.html"},
+			{ime : "Vapiano",tipHrane : "Italian",opstina: "Stari Grad",lokacija : "Kneza Mihaila 54",ocena : 0, slika : "vapiano.jpg",zbir : 0,brojocena : 0, stranica:"vapianoen.html",jelovnik:"vapianojelovniken.html"},
+			{ime : "Shavarma Hanan",tipHrane : "Israel",opstina: "Stari Grad",lokacija : "Strahinjića Bana 57",ocena : 0, slika : "hanan.jpg",zbir : 0,brojocena : 0, stranica:"hananen.html",jelovnik:"hananjelovniken.html"},
+			{ime : "Milky",tipHrane : "Crepes",opstina: "Stari Grad",lokacija : "Kneginje Ljubice 20",ocena : 0, slika : "milky.jpg",zbir : 0,brojocena : 0, stranica:"milkyen.html",jelovnik:"milkyjelovniken.html"},
+			{ime : "Falafel Cose",tipHrane : "Israel",opstina: "Novi Beograd",lokacija : "Gandijeva 3",ocena : 0, slika : "falafel.jpg",zbir : 0,brojocena : 0, stranica:"falafelen.html",jelovnik:"falafeljelovniken.html"},
+			{ime : "Protein",tipHrane : "Protein",opstina: "Novi Beograd",lokacija : "Bulevar Mihajla Pupina 24",ocena : 0, slika : "protein.jpg",zbir : 0,brojocena : 0, stranica:"proteinen.html",jelovnik:"proteinjelovniken.html"},
+			{ime : "Pizza Bar",tipHrane : "Italian",opstina: "Novi Beograd",lokacija : "Bulevar Mihajla Pupina 165v",ocena : 0, slika : "pizzabar.jpg",zbir : 0,brojocena : 0, stranica:"pizzabar1en.html",jelovnik:"pizzabar1jelovniken.html"},
+			{ime : "Intergalactic",tipHrane : "Burgers",opstina: "Novi Beograd",lokacija : "Bulevar Nikole Tesle 3",ocena : 0, slika : "inter.jpg",zbir : 0,brojocena : 0, stranica:"intergalacticen.html",jelovnik:"intergalacticjelovniken.html"},
+			{ime : "Keops",tipHrane : "Crepes",opstina: "Zemun",lokacija : "Kej Oslobođenja bb",ocena : 0, slika : "keops.jpg",zbir : 0,brojocena : 0, stranica:"keopsen.html",jelovnik:"keopsjelovniken.html"},
+			{ime : "Bella Napoli",tipHrane : "Italian",opstina: "Zemun",lokacija : "Zmaj Jovina 35",ocena : 0, slika : "bella.jpg",zbir : 0,brojocena : 0, stranica:"bellaen.html",jelovnik:"bellajelovniken.html"},
+			{ime : "Gong Fast Food",tipHrane : "Chinese",opstina: "Zemun",lokacija : "37k prve pruge",ocena : 0, slika : "gong.jpg",zbir : 0,brojocena : 0, stranica:"gongen.html",jelovnik:"gongjelovniken.html"},
+			{ime : "Burger house",tipHrane : "Burgers",opstina: "Zemun",lokacija : "Nikole Spasića 3",ocena : 0, slika : "burgerhouse.jpg",zbir : 0,brojocena : 0, stranica:"burgerhouseen.html",jelovnik:"burgerhousejelovniken.html"},
+			{ime : "Glumac",tipHrane : "Crepes",opstina: "Vracar",lokacija : "Francuska 3",ocena : 0, slika : "glumac.jpg",zbir : 0,brojocena : 0, stranica:"glumacen.html",jelovnik:"glumacjelovniken.html"},
+			{ime : "Kod Mare",tipHrane : "Burgers",opstina: "Vracar",lokacija : "Novopazarska 14",ocena : 0, slika : "mara.jpg",zbir : 0,brojocena : 0, stranica:"maraen.html",jelovnik:"marajelovniken.html"},
+			{ime : "Pizza Bar",tipHrane : "Italian",opstina: "Vracar",lokacija : "Mutapova 5-7",ocena : 0, slika : "pizzabar2.jpg",zbir : 0,brojocena : 0, stranica:"pizzabar2en.html",jelovnik:"pizzabar2jelovniken.html"},
+			{ime : "Giros Posejdon",tipHrane : "Greek",opstina: "Vracar",lokacija : "Katanićeva",ocena : 0, slika : "posejdon.jpg",zbir : 0,brojocena : 0, stranica:"posejdonen.html",jelovnik:"posejdonjelovniken.html"}
+			]
+			if ('sessionStorage' in window && window.sessionStorage !== null) {
+				sessionStorage.setItem("Restorani",JSON.stringify(Restorani));
+				sessionStorage.setItem("Restoranien",JSON.stringify(Restoranien));
+				console.log(sessionStorage);
+			} else {
+				alert("nesto nece kod locala");
+			}
+			sessionStorage.setItem("broj","3");
+		}
+		function Compare(a,b){
+			return b.ocena-a.ocena;
+		}
+		window.addEventListener("load",function(){
+			var rest=JSON.parse(sessionStorage.getItem("Restorani"));
+			console.log(rest);
+			rest.sort(Compare);
+			console.log(rest[0].slika)
+			var nesto=document.getElementById("prvaslika");
+			nesto.src=rest[0].slika;
+			document.getElementById("naslov1").innerHTML=rest[0].ime;
+			document.getElementById("tip1").innerHTML='Tip hrane: '+rest[0].tipHrane;
+			document.getElementById("opstina1").innerHTML='Opstina: '+rest[0].opstina;
+			document.getElementById("lokacija1").innerHTML='Lokacija: '+rest[0].lokacija;
+			document.getElementById("ocena1").innerHTML='Ocena: '+rest[0].ocena;
+			document.getElementById("dugme1").href=rest[0].stranica;
+			
+			nesto=document.getElementById("drugaslika");
+			nesto.src=rest[1].slika;
+			document.getElementById("naslov2").innerHTML=rest[1].ime;
+			document.getElementById("tip2").innerHTML='Tip hrane: '+rest[1].tipHrane;
+			document.getElementById("opstina2").innerHTML='Opstina: '+rest[1].opstina;
+			document.getElementById("lokacija2").innerHTML='Lokacija: '+rest[1].lokacija;
+			document.getElementById("ocena2").innerHTML='Ocena: '+rest[1].ocena;
+			document.getElementById("dugme2").href=rest[1].stranica;
+			
+			nesto=document.getElementById("trecaslika");
+			nesto.src=rest[2].slika;
+			document.getElementById("naslov3").innerHTML=rest[2].ime;
+			document.getElementById("tip3").innerHTML='Tip hrane: '+rest[2].tipHrane;
+			document.getElementById("opstina3").innerHTML='Opstina: '+rest[2].opstina;
+			document.getElementById("lokacija3").innerHTML='Lokacija: '+rest[2].lokacija;
+			document.getElementById("ocena3").innerHTML='Ocena: '+rest[2].ocena;
+			document.getElementById("dugme3").href=rest[2].stranica;
+		});
+	</script>
+</body>
+
+</html>

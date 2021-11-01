@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel = "text" href = "FIRESTARTER.TTF" >
+		<link rel = "stylesheet" href="potpunCSS.css">
+	</head>
+	<body>
+		<center>
+			<header style="color:yellow;font-size:40px;font-family:dima">
+			<div >
+				<img src="logo4.png" alt="Logo" style="width:75px;">
+				 Hottie
+			</div>
+			</header>
+			<nav class="navbar navbar-expand-md" style="align:center">
+					<button class="navbar-toggler "style="background-color:yellow;margin:0px auto;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon "style="background-image:url(strelica.png)"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav" style="margin:0px auto;">
+							<li class="nav-item">
+								<a class="nav-link" href="weben.html" >Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Restaurants
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+									<a class="dropdown-item bg-warning" href="starigraden.html" style="margin-bottom:10px">Stari Grad</a>
+									<a class="dropdown-item bg-warning" href="novibgen.html" style="margin-bottom:10px">Novi Beograd</a>
+									<a class="dropdown-item bg-warning" href="zemunen.html" style="margin-bottom:10px">Zemun</a>
+									<a class="dropdown-item bg-warning" href="vracaren.html" >Vracar</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="dostavaen.html">Delivery</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="mojanarudzbinaen.html">My Deliveries</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="onamaen.html">About us</a>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Language
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+							<a class="dropdown-item bg-warning" href="formaideale.html" style="margin-bottom:10px">Srpski &nbsp <img src="zastavaSRB.jpg" style="width:20px;height:15px"></a>
+							<a class="dropdown-item bg-warning" href="#" >English &nbsp <img src="zastavaENG.png" style="width:20px;height:15px"></a>
+							</div>
+						</li>
+						</ul>
+					</div>
+				</nav>
+			<div class="container">
+			<div class="row" >
+				<div class="offset-sm-2 col-sm-8 mt-5 bg-light rounded text-center" style="height:525px">
+					<h4>Personal information</h4>
+					<form name="mojaforma">
+						<table class="table table-striped" style="height:500px">
+							<tr>
+								<td>First name:</td>
+								<td><input type="text" name="ime"></td>
+							</tr>
+							<tr>
+								<td>Last name:</td>
+								<td><input type="text" name="prezime"></td>
+							</tr>
+							<tr>
+								<td>E-mail:</td>
+								<td><input type="text" name="mejl"></td>
+							</tr>
+							<tr>
+								<td>Phone number:</td>
+								<td><input type="text" name="telefon"></td>
+							</tr>
+							<tr>
+								<td>Home address:</td>
+								<td><input type="text" name="adresa"></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><input type="button" class="btn btn-dark" value="Fly" onclick="next()"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row"style="margin-top:175px" >
+			<div class="col-sm-3">
+				<nav aria-label="breadcrumb" >
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="weben.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="dostavaen.html">Delivery</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Form</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+			<footer style="background-color:#17202A;color:white;" align="center">
+			Copyright 2019, Nikola Ilic and Dimitrije Gucevic, Department of Software Engineering Electrical Engineering faculty of the University of Belgrade
+		</footer>
+		<script>
+			function next(){
+				var proizvodi=JSON.parse(sessionStorage.getItem("Proizvodi"));
+				var Restorani=JSON.parse(sessionStorage.getItem("Restorani"));
+				if(document.mojaforma.ime.value!=""){
+					if(document.mojaforma.prezime.value!=""){
+						if(document.mojaforma.mejl.value!=""){
+							var regex = /^\w+(-\w+)?@\w+(\.\w{2,3})$/;
+							if(regex.test(document.mojaforma.mejl.value)){
+								if(document.mojaforma.telefon.value!=""){
+									var regex = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
+									if(regex.test(document.mojaforma.telefon.value)){
+										if(document.mojaforma.adresa.value!=null){
+											if ('sessionStorage' in window && window.sessionStorage !== null) {
+												sessionStorage.setItem("ime", document.mojaforma.ime.value);
+												sessionStorage.setItem("prezime", document.mojaforma.prezime.value);
+												sessionStorage.setItem("mejl", document.mojaforma.mejl.value);
+												sessionStorage.setItem("telefon", document.mojaforma.telefon.value);
+												sessionStorage.setItem("adresa", document.mojaforma.adresa.value);
+												for(i=0;i<Restorani.length;i++){
+													if(proizvodi[0].mesto==""){
+														if(Restorani[i].ime==proizvodi[0].restoran){
+															Restorani[i].narudzbine=proizvodi[0].ime;
+															Restorani[i].cena=proizvodi[0].cena;
+															}
+														}else {
+															if(Restorani[i].ime==proizvodi[0].restoran&&Restorani[i].lokacija==proizvodi[0].mesto){
+															Restorani[i].narudzbine=proizvodi[0].ime;
+															Restorani[i].cena=proizvodi[0].cena;
+															}
+														}
+												}
+												alert("Success!")
+												console.log(Restorani);
+												sessionStorage.setItem("Restorani",JSON.stringify(Restorani));
+											} else {
+												alert("Sorry");
+											}
+										}
+										else{
+											alert("You need to enter address");
+										}
+									}
+									else{
+										alert("Phone is not in good format");
+									}
+								}
+								else{
+									alert("You need to enter phone");
+								}
+							}
+							else{
+								alert("Mail is not in good format");
+							}
+						}
+						else{
+							alert("You need to enter mail");
+						}
+					}
+					else{
+						alert("You need to enter last name");
+					}
+				}else{
+						alert("You need to enter first name");
+					}
+			}
+		</script>
+	</body>
+</html>

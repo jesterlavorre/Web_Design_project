@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel = "text" href = "FIRESTARTER.TTF" >
+		<link rel = "stylesheet" href="potpunCSS.css">
+	</head>
+	<body>
+		<center>
+			<header style="color:yellow;font-size:40px;font-family:dima">
+			<div >
+				<img src="logo4.png" alt="Logo" style="width:75px;">
+				 Hottie
+			</div>
+			</header>
+			<nav class="navbar navbar-expand-md" style="align:center">
+					<button class="navbar-toggler "style="background-color:yellow;margin:0px auto;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon "style="background-image:url(strelica.png)"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav" style="margin:0px auto;">
+							<li class="nav-item">
+								<a class="nav-link" href="weben.html" >Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Restaurants
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+									<a class="dropdown-item bg-warning" href="starigraden.html" style="margin-bottom:10px">Stari Grad</a>
+									<a class="dropdown-item bg-warning" href="novibgen.html" style="margin-bottom:10px">Novi Beograd</a>
+									<a class="dropdown-item bg-warning" href="zemunen.html" style="margin-bottom:10px">Zemun</a>
+									<a class="dropdown-item bg-warning" href="vracaren.html" >Vracar</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="dostavaen.html">Delivery</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="mojanarudzbinaen.html">My Deliveries</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="onamaen.html">About us</a>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Language
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:yellow">
+							<a class="dropdown-item bg-warning" href="pizzabar1jelovniken.html" style="margin-bottom:10px">Srpski &nbsp <img src="zastavaSRB.jpg" style="width:20px;height:15px"></a>
+							<a class="dropdown-item bg-warning" href="#">English &nbsp <img src="zastavaENG.png" style="width:20px;height:15px"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div style="color:yellow;font-size:40pt">Pizza Bar menu</div>
+			<form name="mojaforma" method = "post">
+				<div class="container">
+					<div class = "card bg-dark" style="color:white;margin-bottom:10px">
+						<div class = "row">
+							<div class = "col-md-6">
+								<div class = "card-img-bottom" style=" background: url(diavola.jpg)"></div>
+							</div>
+							<div class = "col-md-6">
+								<div class = "card-block">
+									<h1 class = "card-title"name="imeProizvoda1" value="Diavola">Diavola</h1>
+									<p class = "card-text" style = "font-size:15pt">Food type: Pizza</p>
+									<p class = "card-text" style = "font-size:15pt">Ingredients: kulen, cheese, tomato sause</p>
+									<p class = "card-text" style = "font-size:15pt">Cena: 700 rsd</p>
+									<hr style = "color:red">
+									<p class = "card-text" style = "font-size:20pt">
+										<input type = "checkbox" name="proizvod1" value="700"> Poruci
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class = "card bg-dark" style="color:white;margin-bottom:10px">
+						<div class = "row">
+							<div class = "col-md-6">
+								<div class = "card-img-bottom" style=" background: url(margarita.jpg)"></div>
+							</div>
+							<div class = "col-md-6">
+								<div class = "card-block">
+									<h1 class = "card-title" name="imeProizvoda2" value="Margarita">Margarita</h1>
+									<p class = "card-text" style = "font-size:15pt">Food type: Pizza</p>
+									<p class = "card-text" style = "font-size:15pt">Ingredients: cheese, tomato sause</p>
+									<p class = "card-text" style = "font-size:15pt">Price: 800 rsd</p>
+									<hr style = "color:red">
+									<p class = "card-text" style = "font-size:20pt">
+										<input type = "checkbox" name="proizvod2"value="800"> Order
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class = "row">
+						<div class = "col">
+							<button class = "btn bg-success btn-lg"  onclick="sledecikorak()">Confirm</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</center>
+		<div class="row">
+			<div class="col-sm-3">
+				<nav aria-label="breadcrumb" >
+					<ol class="breadcrumb" >
+						<li class="breadcrumb-item"><a href="weben.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="dostavaen.html">Delivery</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Pizza Bar menu</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<footer style="background-color:#17202A;color:white;" align="center">
+			Copyright 2019, Nikola Ilic and Dimitrije Gucevic, Department of Software Engineering Electrical Engineering faculty of the University of Belgrade
+		</footer>
+		<script>
+			function sledecikorak(){
+			var proizvodi=[
+			{ime:"",cena:0,restoran:"",mesto:""}
+			];
+				if(!document.mojaforma.proizvod1.checked &&
+					!document.mojaforma.proizvod2.checked){
+						alert("You need to choose something");
+					}
+				else{
+					if ('sessionStorage' in window && window.sessionStorage !== null) {
+						var i=0,j=0;
+						var sum = 0;
+						var narudzbina = ""
+							if(document.mojaforma.proizvod1.checked){
+								sum += 700;
+								narudzbina += "Diavola";
+							}
+							if(document.mojaforma.proizvod2.checked){
+								if(document.mojaforma.proizvod1.checked){
+								narudzbina+=", ";
+								}
+								sum += 800;
+								narudzbina += "Margarita";
+							}
+							proizvodi[0].ime=narudzbina;
+							proizvodi[0].cena=sum;
+							proizvodi[0].restoran="Pizza Bar";proizvodi[0].mesto="Bulevar Mihajla Pupina 165v";
+							console.log(sum);
+							sessionStorage.setItem("Proizvodi",JSON.stringify(proizvodi));
+							console.log(proizvodi);
+							window.open("formaidealeen.html");
+					} else {
+						alert("Sorry");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
